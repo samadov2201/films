@@ -194,6 +194,7 @@ body {
 }
 
 .filmpage_container {
+    margin-top: 50px;
     display: grid;
     grid-template-columns: [col1-start]35% [col1-end col2-start] 60%[col2-end];
     justify-items: center;
@@ -278,4 +279,22 @@ body {
     border-color: #272727;
     padding: 10px;
     border-radius: 10px;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 50% [col-start]);
+    justify-items: center;
+
+}
+.reviewcard {
+    background-color: #ffc52642;
+width: 200px;
+height: 100px;
+padding: 50px;
+border-radius:10px ;
+}
+.regie img {
+    max-width: 50px;
+    height: auto;
 }
