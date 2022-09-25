@@ -7,15 +7,15 @@ body {
     background-color: #272727 !important;
     color: #ffffff;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .nav_container {
-    top: 1%;
+    top: 0%;
     width: 100%;
     position: fixed;
     display: grid;
-    grid-template-columns: [col1-start]80% [col1-end col2-start] 20%[col2-end];
+    grid-template-columns: [col1-start]20% [col1-end col2-start] 80%[col2-end];
 
 }
 
@@ -48,7 +48,7 @@ body {
 
 
 .nav_bar {
-    grid-column-start: 1;
+    grid-column-start: 2;
     background-color: #ffc426;
     /* border-radius: 0px 15px 15px 0px; */
     display: grid;
@@ -62,7 +62,8 @@ body {
 
 .nav_logo {
     display: grid;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    background-color: #272727;
     background: url(logo.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -159,6 +160,7 @@ body {
 .film_list {
     display: grid;
     grid-template-columns: repeat(3, 30% [col-start]);
+    margin: 50px;
 }
 
 .film:hover {
@@ -212,6 +214,7 @@ body {
 }
 
 .slider {
+    background: url("movie.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -226,15 +229,53 @@ body {
     height: 100vh;
 }
 
-.slider {}
-
-.knop button {
-    text-align: center;
-    padding: 30px 0px;
-    font-size: 26px;
-    margin-bottom: 40px;
-    background-color: transparent;
-    border: 0px;
+.knop a {
     color: #ffffff;
-    transition: all 0.2s linear 0s;
+    text-decoration: none;
+    font-size: 24px;
+    background-color: #27272763;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px#ffffff;
+    transition: 0.5s;
+}
+
+.knop a:hover {
+    background-color: #ffc426;
+    color: #272727;
+    border-color: #272727;
+}
+
+.checked {
+    color: #ffc426;
+}
+
+.actors img {
+    max-width: 100px;
+    height: auto;
+}
+
+.actors p {
+    color: white;
+    text-decoration: none;
+}
+
+.add_form {
+    display: flex;
+    padding: 100px;
+    justify-content: space-around;
+}
+
+#input {
+    width: 35rem;
+    height: 2rem;
+    margin: 5px;
+}
+
+#submit {
+    background-color: #ffc426;
+    color: #272727;
+    border-color: #272727;
+    padding: 10px;
+    border-radius: 10px;
 }
