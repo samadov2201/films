@@ -2,48 +2,49 @@
 <html>
 
 <head>
+    <meta lang="en" charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <title>films enzo</title>
 </head>
 
 <body>
-
-    <div class="nav_container">
+    <div class="frontpage">
+<nav>
         <div class="nav_logo"></div>
 
-        <ul class="nav_bar">
-            <li id="li_1"> <a href="index.html">Home</a></li>
-            <li id="li_2"><a href="films.html">films</a></li>
-            <li id="li_3"> <a href="about.html">About</a></li>
-        </ul>
-    </div>
-    <div class="slider_containter">
-        <div class="slider">
-            <div class="slider--content">
-                <i class="fas fa-angle-left"></i>
-                <div class="slider--feature">
-                    <h1 class="slider--title">Films enzo</h1>
-                    <p class="slider--text"></p>
-                    <div class="knop">
-                        <a href="films.html">ondek films</a>
-                    </div>
-                </div>
-
-                <i class="fas fa-angle-right"></i>
-            </div>
-
+        <div class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="films.html">films</a>
+            <a href="about.html">About</a>
         </div>
-    </div>
+</nav>
+    <header class="frontpage-caroussel">
+        <!-- Caroussel -->
+        <div id="slideshow" class="slideshow">
+          <div>
+            <img src="movie.jpg">
+          </div>
+          <div>
+            <img src="batman-banner.jpg">
+          </div>
+          <div>
+            <img src="top-gun.jpg">
+          </div>
+        </div>
+        <!-- Einde caroussel -->
+</header>
+<main>
+
     <div class="card_container" id="choicecard">
 
         <div class="card_1" onclick="parent.location='films.html'"> <a>FILMS</a></div>
         <div class="card_2" onclick="parent.location='about.html'"><a>ABOUT ME</a></div>
 
     </div>
+</main>
 
-
-
-    <div class="footer_container">
+<footer>
+<div class="footer_container">
 
         <div class="f_card_1">
             <img src="logo.jpg" alt="">
@@ -67,7 +68,12 @@
 
 
     </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="script.js"></script>
+
+</div>
 </body>
 
 </html>

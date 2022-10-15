@@ -7,28 +7,65 @@ body {
     background-color: #272727 !important;
     color: #ffffff;
     margin: 0;
-    padding-top: 80px;
 }
 
-.nav_container {
-    top: 0%;
-    width: 100%;
-    position: fixed;
+.frontpage {
     display: grid;
-    grid-template-columns: [col1-start]20% [col1-end col2-start] 80%[col2-end];
-
+    grid-template-rows: max-content 800px 750px 200px;
+    grid-template-areas: "navigation" "caroussel" "main" "footer";
+}
+.films 
+{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:"navigation navigation" "filter_list main" "footer footer" ;
+}
+.addfilmPage {
+    display: grid;
+    grid-template-areas: "navigation" "main" "footer";
+}
+.frontpage-caroussel {
+    grid-area: caroussel;
+}
+.filter_list {
+    grid-area: filter_list;
+    padding: 50px;
 }
 
-.nav_bar li a {
+nav {
+    grid-area: navigation;
+    display: grid;
+    grid-template-columns: 25%  auto;
+
+    grid-gap: 10px;
+
+    background-color: #ffc426;
+    grid-template-areas: "logo  navBar" ;
+}
+footer {
+    grid-area: footer;
+}
+main {
+    grid-area: main;
+    padding: 50px;
+}
+
+.film_list {
+    display: grid;
+    grid-template-columns: repeat(3, 30% [col-start]);
+    margin: 50px;
+}
+
+.nav_bar a {
     color: #272727;
     text-decoration: none;
     display: inline-block;
     position: relative;
     font-weight: 800;
-
+margin-left: 10%;
 }
 
-.nav_bar li a:after {
+.nav_bar a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -41,29 +78,23 @@ body {
     transition: transform 0.25s ease-out;
 }
 
-.nav_bar li a:hover:after {
+.nav_bar  a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 
 .nav_bar {
-    grid-column-start: 2;
     background-color: #ffc426;
-    /* border-radius: 0px 15px 15px 0px; */
-    display: grid;
     padding: 2rem;
     margin: 0;
-    justify-content: center;
-    justify-items: center;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 100px [col-start]);
+    grid-area: navBar;
+    text-align: center;
+
 }
 
 .nav_logo {
-    display: grid;
-    grid-column-start: 1;
-    background-color: #272727;
+    grid-area: logo;
     background: url(logo.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -82,13 +113,14 @@ body {
 }
 
 .card_container {
+    margin-top: 50px;
+    grid-area: main;
     display: grid;
     grid-template-columns: repeat(2, 50%[col-start]);
     justify-content: center;
     justify-items: center;
     font-weight: 800;
     font-size: 28px;
-
 }
 
 .footer_container {
@@ -115,7 +147,6 @@ body {
 
 }
 
-.f_card_2 {}
 
 .footer_container h3 {
     font-size: 20px;
@@ -157,11 +188,7 @@ body {
     grid-template-columns: [col1-start]15% [col1-end col2-start] 85%[col2-end];
 }
 
-.film_list {
-    display: grid;
-    grid-template-columns: repeat(3, 30% [col-start]);
-    margin: 50px;
-}
+
 
 .film:hover {
     transition: 50ms ease-in;
@@ -177,10 +204,7 @@ body {
 
 }
 
-.filter_list {
-    grid-column-start: 1;
-    margin-left: 5%;
-}
+
 
 .film img {
     width: 100%;
@@ -193,12 +217,6 @@ body {
     text-align: center;
 }
 
-.filmpage_container {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: [col1-start]35% [col1-end col2-start] 60%[col2-end];
-    justify-items: center;
-}
 
 .filmpage_media img {
     width: 250px;
@@ -210,26 +228,23 @@ body {
     height: 400px;
 }
 
-.slider_container {
-    z-index: 100;
-}
 
-.slider {
-    background: url("movie.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 100;
-    margin-bottom: 100px;
-}
 
-.slider--content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
 
+
+.slideshow {
+    padding: 0px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  .slideshow img {
+    height: 800px;
+	width: 100vw;
+}
+  
+.slideshow > div {
+    position: absolute;
+  }
 .knop a {
     color: #ffffff;
     text-decoration: none;
@@ -271,9 +286,12 @@ body {
     width: 35rem;
     height: 2rem;
     margin: 5px;
+    background-color: #ffffff7c;
+    border-radius: 5px;
 }
 
 #submit {
+    
     background-color: #ffc426;
     color: #272727;
     border-color: #272727;
