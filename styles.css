@@ -47,6 +47,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 30% [col-start]);
     margin: 50px;
+    grid-gap: 20px;
 }
 
 .nav_bar a {
