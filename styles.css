@@ -84,12 +84,16 @@ margin-left: 10%;
 }
 .nav_logo {
     grid-area: logo;
-    background: url(logo.jpg);
+    background: url(images/logo.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 
+img {
+    object-fit: cover;
+
+}
 .card_container {
     margin-top: 50px;
     grid-area: main;
@@ -138,7 +142,7 @@ margin-left: 10%;
 
 .card_1 {
     grid-column-start: 1;
-    background: url(movie.jpg);
+    background: url(images/movie.jpg);
     height: 600px;
     width: 60%;
     background-size: cover;
@@ -151,7 +155,7 @@ margin-left: 10%;
 
 .card_2 {
     grid-column-start: 2;
-    background: url(duimpje.jpg);
+    background: url(images/duimpje.jpg);
     height: 600px;
     width: 60%;
     background-size: cover;
